@@ -1,6 +1,6 @@
 // Gestione Burger Menu
 const burgerMenu = document.getElementById('burgerMenu');
-const navMenu = document.getElementById('navMenu');
+const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 
 // Toggle del menu
@@ -50,17 +50,17 @@ window.addEventListener('scroll', () => {
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+// window.addEventListener('scroll', () => {
+//     const currentScroll = window.pageYOffset;
     
-    if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
-    } else {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    }
+//     if (currentScroll > 100) {
+//         navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+//     } else {
+//         navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+//     }
     
-    lastScroll = currentScroll;
-});
+//     lastScroll = currentScroll;
+// });
 
 // Smooth scroll per browser che non lo supportano nativamente
 navLinks.forEach(link => {
