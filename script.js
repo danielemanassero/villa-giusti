@@ -97,3 +97,65 @@ const buildVillaGiusti = document.querySelector('#build-photo .container');
 buildVillaGiusti.addEventListener('mouseenter', () => {
     buildVillaGiusti.classList.add('full');
 });
+
+
+// Carousel camere: pallini di navigazione
+const roomsCarousel = document.getElementById('rooms-carousel');
+const rooms = Array.from(roomsCarousel.querySelectorAll('.room'));
+const carouselDots = document.querySelector('.carousel-dots');
+
+const dots = rooms.map((room, index) => {
+    const dot = document.createElement('button');
+    dot.classList.add('dot');
+    dot.setAttribute('aria-label', `Vai alla camera ${index + 1}`);
+    dot.addEventListener('click', () => {
+        roomsCarousel.scrollTo({ left: room.offsetLeft, behavior: 'smooth' });
+    });
+    carouselDots.appendChild(dot);
+    return dot;
+});
+
+roomsCarousel.addEventListener('scroll', () => {
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+
+    rooms.forEach((room, index) => {
+        const distance = Math.abs(room.offsetLeft - roomsCarousel.scrollLeft);
+        if (distance < closestDistance) {
+            closestDistance = distance;
+            closestIndex = index;
+        }
+    });
+
+    dots.forEach((dot, index) => dot.classList.toggle('active', index === closestIndex));
+});
+
+dots[0].classList.add('active');
+
+// Carousel camere: trascinamento laterale (mouse su desktop, swipe su mobile)
+let isDraggingCarousel = false;
+let dragStartX = 0;
+let dragStartScrollLeft = 0;
+
+roomsCarousel.addEventListener('pointerdown', (e) => {
+    isDraggingCarousel = true;
+    roomsCarousel.classList.add('dragging');
+    dragStartX = e.clientX;
+    dragStartScrollLeft = roomsCarousel.scrollLeft;
+    roomsCarousel.setPointerCapture(e.pointerId);
+});
+
+roomsCarousel.addEventListener('pointermove', (e) => {
+    if (!isDraggingCarousel) return;
+    roomsCarousel.scrollLeft = dragStartScrollLeft - (e.clientX - dragStartX);
+});
+
+roomsCarousel.addEventListener('pointerup', () => {
+    isDraggingCarousel = false;
+    roomsCarousel.classList.remove('dragging');
+});
+
+roomsCarousel.addEventListener('pointercancel', () => {
+    isDraggingCarousel = false;
+    roomsCarousel.classList.remove('dragging');
+});

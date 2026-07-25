@@ -421,6 +421,141 @@ body {
 }
 
 
+/***************************
+********** CAMERE **********
+****************************/
+#camere {
+    background-color: #58748B;
+    color: #fff;
+    text-align: left;
+
+    .container {
+        padding: 80px 0;
+        margin-top: 150px;
+        
+        @media screen and (min-width: 768px) { margin-top: 0; }
+    }
+
+    h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+
+    .title {
+        color: #fff;
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 64px;
+        padding-bottom: 48px;
+    }
+
+    #rooms-carousel {
+        display: flex;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        touch-action: pan-y;
+        cursor: grab;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &.dragging {
+            cursor: grabbing;
+        }
+    }
+
+    .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        padding-top: 32px;
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: none;
+            padding: 0;
+            background-color: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+
+            &.active {
+                background-color: #fff;
+            }
+        }
+    }
+
+    .room {
+        width: 295px;
+        height: auto;
+        flex-shrink: 0;
+        margin-right: 32px;
+
+        &:last-child { margin-right: 0; }
+
+        @media screen and (min-width: 768px) { width: 525px; }
+
+        img {
+            width: 100%;
+            height: auto;
+            padding-bottom: 32px;
+        }
+
+        .name-dimesions {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding-bottom: 24px;
+
+            .name {
+                color: #fff;
+                font-size: 32px;
+                line-height: 32px;
+                text-align: left;
+                text-transform: uppercase;
+            }
+
+            .dimensions {
+                color: #fff;
+                font-size: 24px;
+                line-height: 24px;
+                text-align: right;
+                text-transform: uppercase;
+            }
+        }
+
+        .description {
+            color: #fff;
+            font-size: 20px;
+            line-height: 32px;
+            text-align: left;
+            padding-bottom: 24px;
+        }
+
+        .info {
+            text-align: left;
+
+            .info-item {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding-bottom: 24px;
+
+                .icon {
+                    padding-right: 16px;
+                }
+            }
+        }
+    }
+}
+
+
 
 
 /* Responsive Design - Tablet e Mobile */
