@@ -46,6 +46,17 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// Animazione hover titolo "We Take Care"
+const takeCareTitle = document.querySelector('.take-care-title');
+
+takeCareTitle.addEventListener('mouseenter', () => {
+    takeCareTitle.classList.add('active');
+});
+
+takeCareTitle.addEventListener('mouseleave', () => {
+    takeCareTitle.classList.remove('active');
+});
+
 // Effetto navbar al scroll
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');

@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
+
 /* Reset e Base Styles */
 * {
     margin: 0;
@@ -20,7 +22,7 @@ body {
 
 /* Navbar Styles */
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -137,7 +139,7 @@ body {
 
 /* Section Styles */
 .section {
-    padding: 4rem 2rem;
+    padding: 20px 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,25 +152,95 @@ body {
 }
 
 .section-content {
-    max-width: 1200px;
+    max-width: 1440px;
     width: 100%;
     text-align: center;
 }
 
-.section h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+/**********************************
+********** WER TAKE CARE **********
+**********************************/
+#we-take-care {
+    background-color: #58748B;
+    color: #fff;
+    text-align: left;
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 58px;
+        line-height: 1.05;
+        letter-spacing: -0.02rem;
+        text-align: left;
+
+        @media screen and (min-width: 768px) {
+            /* font-size: 100px; */
+            font-size: 140px;
+        }
+        /* @media screen and (min-width: 1220px) {
+            font-size: 140px;
+        } */
+    }
+
+    .intro-line {
+        text-align: left;
+        transition: transform 0.3s ease;
+    }
+    .cta-line {
+        text-align: left;
+        font-style: italic;
+        transition: transform 0.3s ease;
+
+        @media screen and (min-width: 768px) {
+            text-align: right;
+        }
+    }
+
+    .take-care-title.active .intro-line {
+        transform: translateX(30px);
+    }
+    .take-care-title.active .cta-line {
+        transform: translateX(-30px);
+    }
+
+    .arrow-icon {
+        display: inline-flex;
+        vertical-align: middle;
+        color: #3F4448;
+    }
+
+    .arrow-icon svg {
+        display: block;
+        width: 4rem;
+        height: auto;
+
+        @media screen and (min-width: 768px) {
+            width: 10rem;
+        }
+        @media screen and (min-width: 1220px) {
+            width: 12rem;
+        }
+    }
+
+    .take-care-desc {
+        font-size: 20px;
+        font-style: normal;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.85);
+        padding-top: 50px;
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            padding-left: 60%;
+            padding-right: 10%;
+            /* width: 440px; */
+        }
+    }
 }
 
-.section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
+/* Responsive Design - Tablet e Mobile */
+@media screen and (max-width: 768px) {}
 
-.section p {
-    font-size: 1.2rem;
-    color: #666;
-}
+@media screen and (max-width: 480px) {}
 
 /* Colori Sezioni */
 #home {
@@ -180,7 +252,7 @@ body {
     color: rgba(255, 255, 255, 0.9);
 }
 
-#sezione1 {
+/* #sezione1 {
     background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     color: white;
 }
@@ -232,42 +304,4 @@ body {
 
 #sezione6 p {
     color: #666;
-}
-
-/* Responsive Design - Tablet e Mobile */
-@media screen and (max-width: 768px) {
-
-    .section h1 {
-        font-size: 2rem;
-    }
-
-    .section h2 {
-        font-size: 1.8rem;
-    }
-
-    .section p {
-        font-size: 1rem;
-    }
-
-    .nav-container {
-        padding: 1rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .logo h2 {
-        font-size: 1.2rem;
-    }
-
-    .section h1 {
-        font-size: 1.5rem;
-    }
-
-    .section h2 {
-        font-size: 1.5rem;
-    }
-
-    .section {
-        padding: 3rem 1rem;
-    }
-}
+} */
