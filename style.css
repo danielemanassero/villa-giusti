@@ -74,9 +74,9 @@ body {
     /* max-width: 300px; */
     background: #58748B;
     display: flex;
-    list-style: none;
+    /* list-style: none; */
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 2rem;
     /* box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2); */
@@ -86,6 +86,17 @@ body {
 .nav-menu.active {
     right: 0;
 }
+.nav-menu .logo {
+    text-align: center;
+
+    img {
+        width: 165px;
+        height: auto;
+    }
+}
+.nav-menu .nav-link-wrapper {
+    text-align: center;
+}
 .nav-link {
     text-decoration: none;
     color: #fff;
@@ -94,11 +105,17 @@ body {
     padding: 0.5rem 1rem;
     font-family: "Work Sans", sans-serif;
     text-transform: uppercase;
-    font-size: 48px;
+    font-size: 40px;
     line-height: 163%;
 }
 .nav-link:hover {
     color: #3498db;
+}
+.nav-menu .social {
+    text-align: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
 }
 
 /* Burger Menu */
@@ -881,7 +898,11 @@ body {
         .social {
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: center;
+
+            @media screen and (min-width: 768px) {
+                justify-content: flex-end;
+            }
         }
     }
 
