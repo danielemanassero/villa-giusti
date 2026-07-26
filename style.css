@@ -44,6 +44,23 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+
+    /* .desktop-bg {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            position: absolute;
+            top: 0;
+            max-width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            width: 50%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    } */
 }
 .cta-appartamenti a {
     display: none;
@@ -103,6 +120,7 @@ body {
         width: 130px;
         height: 50px;
         border-radius: 50px;
+        border: 1px solid #fff;
         margin-right: 32px;
 
         &:hover {
@@ -119,12 +137,14 @@ body {
     display: flex;
     justify-content: center;
 
+    @media screen and (min-width: 768px) { justify-content: flex-end; }
+
     hr {
         width: 90%;
         display: block;
         color: #fff;
 
-        @media screen and (min-width: 768px) { width: 95%; }
+        @media screen and (min-width: 768px) { width: 50%; }
     }
 }
 .nav-menu {
@@ -236,6 +256,143 @@ body {
     width: 100%;
     text-align: center;
 }
+
+
+/*************************
+********** HOME **********
+**************************/
+#home {
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    background: #58748B;
+    color: white;
+
+    .mobile {
+        display: block;
+        background-image: url('images/villa_giusti_build.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        margin-left: -15px;
+        margin-right: -15px;
+
+        @media screen and (min-width: 768px) { display: none; }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            background-color: rgba(0, 0, 0, 0.5);
+            min-height: 100vh;
+            height: 100vh;
+            width: 100%;
+        }
+        h1 {
+            color: #fff;
+            font-size: 110px;
+            font-weight: 400;
+            line-height: 100%;
+            padding-bottom: 45%;
+        }
+        p {
+            color: #fff;
+            font-size: 32px;
+            padding-bottom: 15%;
+        }
+    }
+
+    .desktop {
+        display: none;
+        @media screen and (min-width: 768px) { display: block; }
+
+        .wrapper {
+            min-height: 100vh;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            /* margin-left: -15px;
+            margin-right: -15px; */
+        }
+        .left {
+            background-image: url('images/villa_giusti_build.jpg');
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            height: 100vh;
+            width: 50%;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* margin-left: -15px; */
+        }
+        .right {
+            min-height: 100vh;
+            height: 100vh;
+            width: 50%;
+            background-color: #58748B;
+            background-image: url('images/hero_desktop.png');
+            background-position: center right;
+            background-repeat: no-repeat;
+            /* margin-right: -15px; */
+        }
+        .container {
+            position: absolute;
+            top: 0;
+            /* left: 0; */
+            min-height: 100vh;
+            /* height: 100vh;
+            width: 100%; */
+            /* padding-top: 15%; */
+            max-width: 1440px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h1 {
+                color: #fff;
+                font-size: 150px;
+                font-weight: 400;
+                line-height: 100%;
+            }
+            .bottom-hero {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                padding-left:2rem;
+                padding-right:2rem;
+                padding-bottom: 32px;
+
+                .text {
+                    display: flex;
+                    align-items: flex-start;
+                    color: #fff;
+                    font-size: 16px;
+                    line-height: 20px;
+                    width: 45%;
+
+                    p {
+                        text-align: left;
+                        width: 45%;
+                    }
+                }
+                .scroll {
+                    width: 40px;
+                    text-align: center;
+                }
+                .subtitle {
+                    color: #fff;
+                    font-size: 36px;
+                    text-align: right;
+                    width: 45%;
+                }
+            }
+        }
+    }
+}
+
 
 /*********************************
 ********** WE TAKE CARE **********
@@ -995,15 +1152,6 @@ body {
 @media screen and (max-width: 480px) {}
 
 /* Colori Sezioni */
-#home {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-}
-
-#home p {
-    color: rgba(255, 255, 255, 0.9);
-}
-
 /* #sezione1 {
     background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     color: white;
