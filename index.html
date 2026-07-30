@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDXZLBWNVS"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RDXZLBWNVS');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Villa Giusti 5 | Studentato e Co-Housing a Torino</title>
@@ -11,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
     <!-- Navbar con Burger Menu -->
@@ -91,7 +101,7 @@
                 </div>
                 <div class="container">
                     <h1>VILLA GIUSTI</h1>
-                    <div style="align-self:flex-end;">
+                    <div class="bottom-wrapper">
                         <div class="bottom-hero">
                             <div class="text">
                                 <p>23 camere pensate per studenti e giovani lavoratori, a due passi dal nuovo campus di Grugliasco. Ambienti curati, servizi inclusi, un'identità tutta torinese.</p>
@@ -122,7 +132,7 @@
                         </svg>
                     </span> ENJOY
                 </h2> -->
-                <h2 class="intro-line">NOI PENSIAMO AL COMFORT</h2>
+                <h2 class="intro-line">NOI PENSIAMO A TE</h2>
                 <h2 class="cta-line">TU
                     <span class="arrow-icon" aria-hidden="true">
                         <svg viewBox="0 0 60 24" xmlns="http://www.w3.org/2000/svg">
@@ -519,7 +529,7 @@
                                 </div>
                                 <div>Sala studio</div>
                             </div>
-                            <div class="text">Uno spazio pensato per lo studio condiviso, con tavoli e sedie per organizzare una sessione con i compagni di corso</div>
+                            <div class="text">Uno spazio pensato per lo studio condiviso, con tavoli e sedie per organizzare una sessione con i compagni di corso.</div>
                         </div>
 
                         <div class="service-item">
@@ -561,7 +571,7 @@
                             </svg>
                         </div>
                         <div class="info">
-                            <a href="mailto:info@villagiustitorino.com">info@villagiustitorino.com</a>
+                            <a href="mailto:info@villagiustitorino.it">info@villagiustitorino.it</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -601,8 +611,9 @@
                         <p class="link-item"><a href="#camere">LE CAMERE</a></p>
                         <p class="link-item"><a href="#servizi">SERVIZI</a></p>
                         <p class="link-item"><a href="#contatti">CONTATTI</a></p>
-                        <p class="link-item contact"><a href="mailto:info@villagiustitorino.com">info@villagiustitorino.com</a></p>
+                        <p class="link-item contact"><a href="mailto:info@villagiustitorino.it">info@villagiustitorino.it</a></p>
                         <p class="link-item contact"><a href="tel:+39 391 1320678">+39 391 1320678</a></p>
+                        <p class="link-item contact"><a href="https://maps.app.goo.gl/ABFbUajkbvjCJkLXA" target="_blank">Via villa giusti 5, Torino</a></p>
                     </nav>
                     <div class="social">
                         <a href="https://www.instagram.com/villagiusti.torino?igsh=MWQ2YTlwYm5waTAzZw==" target="_blank" aria-label="Instagram" style="margin-right:32px;">
@@ -630,6 +641,38 @@
             </div>
             <div class="bottom">
                 <p>&copy;2026 Villa Giusti.<br />Tutti i diritti riservati.</p>
+                <!-- <p>
+                    <button command="show-modal" commandfor="privacy-policy" class="policy-link">Privacy policy</button>
+                    <button command="show-modal" commandfor="cookie-policy" class="policy-link">Cookie policy</button>
+                </p> -->
+
+                <!-- <dialog id="privacy-policy" class="policy-modal">
+                    <div class="modal-container">
+                        <p>
+                            PRIVACY - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <button commandfor="privacy-policy" command="close" class="policy-close">
+                        <svg width="20" height="20" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="6" y1="6" x2="24" y2="24" stroke="white" stroke-width="2"/>
+                            <line x1="24" y1="6" x2="6" y2="24" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </dialog> -->
+
+                <!-- <dialog id="cookie-policy" class="policy-modal">
+                    <div class="modal-container">
+                        <p>
+                            COOKIE - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <button commandfor="cookie-policy" command="close" class="policy-close">
+                        <svg width="20" height="20" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="6" y1="6" x2="24" y2="24" stroke="white" stroke-width="2"/>
+                            <line x1="24" y1="6" x2="6" y2="24" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </dialog> -->
             </div>
         </div>
     </footer>
