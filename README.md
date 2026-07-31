@@ -1,3 +1,3 @@
 # Villa Giusti
 
-Landing page del progetto Villa Giusti
+Villa Giusti Torino landing page project
